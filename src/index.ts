@@ -55,8 +55,8 @@ const videos: {title: string; link: string}[] = [
     }
 ];
 
-const enableImages = false;
-const enableVideos = false;
+const enableImages = true;
+const enableVideos = true;
 
 server.get("/", async (_, reply) => {
     reply.send("gm builder")
