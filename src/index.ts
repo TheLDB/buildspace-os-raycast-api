@@ -2,7 +2,7 @@ import fastify from "fastify";
 
 const server = fastify({ logger: true });
 
-const images = [
+const images: {title: string; image: string;}[] = [
   {
     title: "one",
     image: "http://example.com",
@@ -21,7 +21,7 @@ const images = [
   },
 ];
 
-const upcomingEvents = [
+const upcomingEvents: {date: string; event: string; rsvp: string;}[] = [
   {
     date: "april 8",
     event: "ideas 101 w/ farza",
@@ -39,7 +39,19 @@ const upcomingEvents = [
   },
 ];
 
+const videos: {title: string; link: string}[] = [
+    {
+        title: "one",
+        link: "one-link"
+    },
+    {
+        title: "two",
+        link: "two-link"
+    }
+];
+
 const enableImages = false;
+const enableVideos = false;
 
 server.get("/", async (_, reply) => {
     reply.send("gm builder")
@@ -56,6 +68,14 @@ server.get("/api/images", async (_, reply) => {
 server.get("/api/events", async (_, reply) => {
   reply.send(upcomingEvents);
 });
+
+server.get("/api/videosEnabled", async (_, reply) => {
+    reply.send(enableVideos);
+})
+
+server.get("/api/videos", async (_, reply) => {
+    reply.send(videos);
+})
 
 const start = async () => {
   try {
