@@ -4,49 +4,54 @@ const server = fastify({ logger: true });
 
 const images: {title: string; image: string;}[] = [
   {
-    title: "one",
-    image: "http://example.com",
+    title: "banner_s.png",
+    image: "https://framerusercontent.com/images/A4ATGSFzLdUkscJGEJAl1xoRg.png",
   },
   {
-    title: "two",
-    image: "http://example.com",
+    title: "banner_a.png",
+    image: "https://framerusercontent.com/images/amo7e1yQz0pEcRbaZFObkTpQIjc.png",
   },
   {
-    title: "three",
-    image: "http://example.com",
+    title: "banner_g.png",
+    image: "https://framerusercontent.com/images/3HszPak0gJ3FySgT9VG9uk02j4.png",
   },
   {
-    title: "four",
-    image: "http://example.com",
+    title: "banner_e.png",
+    image: "https://framerusercontent.com/images/kzNIFbdmcPta67CoMrd1x93h9o0.png",
   },
 ];
 
 const upcomingEvents: {date: string; event: string; rsvp: string;}[] = [
   {
-    date: "april 8",
+    date: "april 11",
     event: "ideas 101 w/ farza",
     rsvp: "https://lu.ma/26hnwhzm",
   },
   {
-    date: "april 10",
+    date: "april 13",
     event: "building w/ shaan puri",
     rsvp: "https://lu.ma/6vgyneo4",
   },
   {
-    date: "april 12",
+    date: "april 15",
     event: "life & lexica w/ sharif",
     rsvp: "https://lu.ma/8s7zlrgc",
   },
+  {
+    date: "forever",
+    event: "subscribe to cal",
+    rsvp: "https://calendar.google.com/calendar/u/0?cid=Y181Y2NlMjZiOWM4ZTkyMjUxMWNiNTE4OGJmMDYxMWQwZDE3YjQyOGNiZTRmMTY0NDIyMzFlMjZjNjQwYTI4NjlmQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"
+  }
 ];
 
 const videos: {title: string; link: string}[] = [
     {
-        title: "one",
-        link: "one-link"
+        title: "kickoff_apr_8.mp4",
+        link: "https://www.twitch.tv/videos/1788278186?t=00h21m05s"
     },
     {
-        title: "two",
-        link: "two-link"
+        title: "slides",
+        link: "https://www.figma.com/proto/NsoRBkV2uMDAH3X967cKB5/s3----kickoff?node-id=1-2"
     }
 ];
 
