@@ -41,6 +41,10 @@ const upcomingEvents = [
 
 const enableImages = false;
 
+server.get("/", async (_, reply) => {
+    reply.send("gm builder")
+})
+
 server.get("/api/imagesEnabled", async (_, reply) => {
   reply.send(enableImages);
 });
