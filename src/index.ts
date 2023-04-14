@@ -26,16 +26,6 @@ const images: { title: string; image: string }[] = [
 
 const upcomingEvents: { date: string; event: string; rsvp: string }[] = [
   {
-    date: "april 11",
-    event: "ideas 101 w/ farza",
-    rsvp: "https://lu.ma/26hnwhzm",
-  },
-  {
-    date: "april 13",
-    event: "building w/ shaan puri",
-    rsvp: "https://lu.ma/6vgyneo4",
-  },
-  {
     date: "april 15",
     event: "life & lexica w/ sharif",
     rsvp: "https://lu.ma/8s7zlrgc",
@@ -48,6 +38,10 @@ const upcomingEvents: { date: string; event: string; rsvp: string }[] = [
 ];
 
 const videos: { title: string; link: string }[] = [
+  {
+    title: "shaan_puri.mp4",
+    link: "https://twitter.com/i/status/1646708105810702337",
+  },
   {
     title: "ideas_101.mp4",
     link: "https://www.twitch.tv/videos/1790897122",
