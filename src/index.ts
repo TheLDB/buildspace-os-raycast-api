@@ -26,9 +26,19 @@ const images: { title: string; image: string }[] = [
 
 const upcomingEvents: { date: string; event: string; rsvp: string }[] = [
   {
-    date: "april 15",
-    event: "life & lexica w/ sharif",
-    rsvp: "https://lu.ma/8s7zlrgc",
+    date: "april 18",
+    event: "validating + users w/ farza",
+    rsvp: "https://lu.ma/b5vrvdu1"
+  },
+  {
+    date: "april 20",
+    event: "building curse w/ hubert",
+    rsvp: "https://lu.ma/pvedfd24"
+  },
+  {
+    date: "april 22",
+    event: "saturday shenanigans",
+    rsvp: "https://lu.ma/g311wory"
   },
   {
     date: "forever",
@@ -38,6 +48,10 @@ const upcomingEvents: { date: string; event: string; rsvp: string }[] = [
 ];
 
 const videos: { title: string; link: string }[] = [
+  {
+    title: "sharif.mp4",
+    link: "https://www.twitch.tv/videos/1794532243?t=00h19m18s"
+  },
   {
     title: "shaan_puri.mp4",
     link: "https://twitter.com/i/status/1646708105810702337",
@@ -60,9 +74,20 @@ const videos: { title: string; link: string }[] = [
   },
 ];
 
+const misc: { title: string; link: string; other?: string; }[] = [
+  {
+    title: "message_from_farza.mp4",
+    link: "https://www.loom.com/share/96f60a37cf384062bdde1e000dc4def7"
+  },
+  {
+    title: "w1 update",
+    link: "https://airtable.com/shreNcrU7AqhDFHPT"
+  }
+];
+
 const enableImages = true;
 const enableVideos = true;
-
+const enableMisc = true;
 server.get("/", async (_, reply) => {
   reply.send("gm builder");
 });
@@ -77,6 +102,14 @@ server.get("/api/images", async (_, reply) => {
 
 server.get("/api/events", async (_, reply) => {
   reply.send(upcomingEvents);
+});
+
+server.get("/api/misc", async (_, reply) => {
+  reply.send(misc);
+})
+
+server.get("/api/miscEnabled", async (_, reply) => {
+  reply.send(enableMisc)
 });
 
 server.get("/api/videosEnabled", async (_, reply) => {
